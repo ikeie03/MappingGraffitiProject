@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+        <html>
+           <head>
+              <title>OSM and Leaflet</title>
+              <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" type="text/css" href="static/map_style.css">
+           </head>
+<body>
+              <div id = "map" style = "width: 900px; height: 580px"></div>
+              <script>
+                 // Creating map options
+                 var mapOptions = {
+                    center: [40.110558, -88.228333],
+                    zoom: 40
+                 }
+                 
+                 // Creating a map object
+                 var map = new L.map('map', mapOptions);
+                 
+                 // Creating a Layer object
+                 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+                 
+                 // Adding layer to the map
+                 map.addLayer(layer);
+
+                 let array = [{'x-coordinate': 40.110558,
+                                'y-coordinate': -88.228333
+                            }]
+
+                  var coordinates = {{coordinates | tojson}}
+                  var artists = {{artists | tojson}}
+
+               for (let i = 0; i < coordinates.length; i++) {
+                  var latitude = Number(coordinates[i][1])
+                  var longitude = Number(coordinates[i][0])
+                  console.log(latitude, longitude)
+                  var marker = L.marker([latitude, longitude]).addTo(map)
+                  var artist = artists[i]
+                  var popup = marker.bindPopup(`<b>${artist}<b>`)
+               }
+
+              </script>
+              </a href="/upload">
+</body>
+           
+</html>
