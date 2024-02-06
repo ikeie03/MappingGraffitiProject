@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* https://codepen.io/ainalem/pen/GRqPwoz */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the buttons */
+    background-color: #000;
+    height: 100vh;
+}
+
+.title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+a {
+    display: inline-block;
+    background-color: #5189cc;
+    margin: 20px auto;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #61affe;
+    padding: 20px 35px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #61affe;
+    color: #fff;
+}
