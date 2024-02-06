@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="static/upload.css">
 </head>
 <body>
     <div>
-		<h1> Upload File:</h1>
+        <iframe src="navbar.html" width="100%" height="50" frameborder="0" scrolling="no"></iframe>
+		<h1 class="title"> Upload File:</h1>
 		<form method="POST" action="/upload-file" enctype="multipart/form-data">
-			<input type="file" name="file">
-            <input type="text" name="artist" placeholder="Artist Tag">
-            <input type="text" name="description" placeholder="Description">
-            <button type="submit">Submit</button>
+            <div class="input-container">
+                <input class="input" type="file" name="file">
+            </div>
+            <div class="input-container">
+                <input class="input" type="text" name="artist" placeholder="Artist Tag">
+            </div>
+            <div class="input-container">
+                <input class="input"  type="text" name="description" placeholder="Description">
+            </div>
+            <button class="submit" type="submit">Submit</button>
 		</form>
 	</div>
 </body>
