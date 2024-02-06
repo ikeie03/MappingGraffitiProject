@@ -30,7 +30,7 @@ def get_x_coordinate(file):
     - file (str): Path to the image file.
 
     Returns:
-    - float: The Y-coordinate (longitude) in decimal degrees.
+    - float: The X-coordinate (longitude) in decimal degrees.
     """
     register_heif_opener()
     image = Image.open(file)
