@@ -1,9 +1,35 @@
 body {
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #000;  
 }
 
+#map {
+    width: 900px;
+    height: 580px;
+    margin: 0 auto; /* Center the map horizontally */
+    border: 2px solid #61affe; /* Add a border */
+    border-radius: 10px;
+}
+
+/* for back button */
+
+.back-container {
+    text-align: center;
+}
+
+.back {
+    display: inline-block;
+    background-color: #5189cc;
+    margin: 20px auto;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+    border: 5px solid #61affe;
+    padding: 20px 35px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back:hover {
+    background-color: #61affe;
+    color: #fff;
+}
