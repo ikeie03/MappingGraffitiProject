@@ -61,3 +61,27 @@ form {
 .submit:active {
     background-color: #06b;
 }
+
+/* for back button */
+
+.back-container {
+    text-align: center;
+}
+
+.back {
+    display: inline-block;
+    background-color: #5189cc;
+    margin: 20px auto;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #61affe;
+    padding: 20px 35px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back:hover {
+    background-color: #61affe;
+    color: #fff;
+}
